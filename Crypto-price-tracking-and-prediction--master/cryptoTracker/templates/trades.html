@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+  <title>BEGS</title>
+</head>
+
+<body style="background-color:rgb(211, 149, 209)">
+
+  <nav style="margin-bottom:130px; height: 100px;" class=" navbar navbar-expand-sm navbarcolor">
+    <div class="container ">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a style="font-size : 70px; " class="nav-link active text-white " href="{{ url_for('home_page') }}"><strong>BEGS</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold text-white fs-3 mt-5" href="{{ url_for('home_page') }}">MAIN PAGE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fs-3 ms-3 mt-5" href="{{ url_for('trade_page') }}">TRADES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fs-3 ms-3 mt-5" href="{{ url_for('register_page') }}">ACCOUNT</a>
+        </li>
+      </ul>
+      <li class="nav-item">
+        <a class="nav-link text-white fs-3 ms-3 mt-5" href="{{ url_for('logout_page')}}"><img src="{{ url_for('static',filename='3094700.png') }}" alt="Trulli" width="100" height="100"></a>
+      </li>
+    </div>
+  </nav>
+
+
+
+
+  <div class="container ">
+    <div  style="margin-bottom: 150px;" class="row mt-5 pt-5 pb-5 ps-5 ms-2">
+      <div class="col-sm-1 mx-3"><svg style="height: 150px;width: 150px;" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256"
+          xml:space="preserve">
+          <desc>Created with Fabric.js 1.7.22</desc>
+          <defs>
+          </defs>
+          <g transform="translate(128 128) scale(0.72 0.72)" style="">
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+              transform="translate(-175.05 -175.05000000000004) scale(3.89 3.89)">
+              <path d="M 50.103 90 h -8.7 C 22.378 90 6.956 69.853 6.956 45 S 22.378 0 41.403 0 l 7.194 0 L 50.103 90 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(228,175,24); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 44.555 1.431 H 32.839 c -1.989 0.665 -3.912 1.542 -5.745 2.637 h 11.8 C 40.704 2.987 42.593 2.094 44.555 1.431 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 33.116 8.454 H 21.315 c -0.971 0.913 -1.906 1.887 -2.798 2.924 h 11.8 C 31.21 10.341 32.145 9.367 33.116 8.454 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 26.112 17.225 H 14.311 c -0.569 0.946 -1.113 1.919 -1.623 2.924 h 11.8 C 24.999 19.144 25.543 18.171 26.112 17.225 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 21.978 25.996 H 10.178 c -0.342 0.957 -0.657 1.932 -0.948 2.924 h 11.8 C 21.321 27.928 21.637 26.953 21.978 25.996 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 19.662 34.767 h -11.8 c -0.172 0.964 -0.323 1.937 -0.446 2.924 h 11.8 C 19.339 36.704 19.491 35.731 19.662 34.767 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 18.757 45 c 0 -0.49 0.016 -0.975 0.028 -1.462 h -11.8 C 6.973 44.025 6.956 44.51 6.956 45 s 0.016 0.975 0.028 1.462 h 11.8 C 18.773 45.975 18.757 45.49 18.757 45 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 19.216 52.309 h -11.8 c 0.123 0.986 0.274 1.96 0.446 2.924 h 11.8 C 19.491 54.269 19.339 53.296 19.216 52.309 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 21.03 61.08 H 9.23 c 0.291 0.992 0.606 1.967 0.948 2.924 h 11.801 C 21.637 63.047 21.321 62.072 21.03 61.08 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 24.488 69.851 h -11.8 c 0.511 1.005 1.055 1.978 1.623 2.924 h 11.801 C 25.543 71.829 24.999 70.856 24.488 69.851 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 30.318 78.622 h -11.8 c 0.892 1.037 1.826 2.011 2.798 2.924 h 11.801 C 32.145 80.633 31.21 79.659 30.318 78.622 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <path
+                d="M 38.256 85.554 l -11.163 0.378 c 1.856 1.109 3.804 1.994 5.819 2.662 h 11.715 C 42.41 87.851 40.278 86.828 38.256 85.554 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(196,146,20); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+              <ellipse cx="48.597" cy="45" rx="34.447" ry="45"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,217,73); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " />
+              <ellipse cx="48.592" cy="45" rx="26.792" ry="35"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(228,175,24); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " />
+              <path
+                d="M 64.497 38.26 v -7.743 c 0 -4.382 -3.927 -7.58 -8.753 -7.129 l -3.026 0.283 v -4.16 l -5 0.467 v 4.16 l -11.187 1.045 v 5 l 3.111 -0.291 v 32.271 l -3.111 0.291 v 5 l 11.187 -1.045 v 4.066 l 5 -0.467 v -4.066 l 3.026 -0.283 c 4.826 -0.451 8.753 -4.382 8.753 -8.764 v -7.743 c 0 -2.108 -0.915 -3.937 -2.396 -5.222 C 63.582 42.367 64.497 40.368 64.497 38.26 z M 59.497 49.619 v 7.743 c 0 1.597 -1.719 3.107 -3.753 3.297 l -11.102 1.037 V 48.06 l 11.102 -1.037 C 57.778 46.833 59.497 48.022 59.497 49.619 z M 44.642 43.06 V 29.425 l 11.102 -1.037 c 2.034 -0.19 3.753 0.999 3.753 2.596 v 7.743 c 0 1.597 -1.719 3.107 -3.753 3.297 L 44.642 43.06 z"
+                style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,217,73); fill-rule: nonzero; opacity: 1;"
+                transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+            </g>
+          </g>
+        </svg> </div>
+      <div class="col-sm-2 ms-3 mt-3 pt-3">
+        <p class="fs-3 fw-bold text-white"> BITCOIN <br> 474.655,48TRY</p>
+        <div>
+          <p style="color: red;" class="fw-bold fs-5">%-8.84 </p>
+        </div>
+      </div>
+
+      <div class="col-sm-1 "><img style="width: 150px; height:150px"
+          src="https://cdn.worldvectorlogo.com/logos/ethereum-1.svg" alt="Ethereum logo vector"></div>
+      <div class="col-sm-2 mt-3 ms-3 mt-3 pt-3 ">
+        <p class="fs-3 fw-bold text-white">ETHEREUM <br> 34.613,91TRY </p>
+        <div>
+          <p style="color: red;" class="fw-bold fs-5">%-8.95 </p>
+        </div>
+      </div>
+      <div class="col-sm-1  "><svg style="height:150px ;width:150px" id="Layer_1" data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.97 511.97">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #f3ba2f;
+              }
+            </style>
+          </defs>
+          <title>binance-coin-bnb</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Layer_1-2" data-name="Layer 1-2">
+              <path class="cls-1"
+                d="M156.56,215.14,256,115.71l99.47,99.47,57.86-57.85L256,0,98.71,157.28l57.85,57.85M0,256l57.86-57.87L115.71,256,57.85,313.83Zm156.56,40.85L256,396.27l99.47-99.47,57.89,57.82,0,0L256,512,98.71,354.7l-.08-.09,57.93-57.77M396.27,256l57.85-57.85L512,256l-57.85,57.85Z">
+              </path>
+              <path class="cls-1"
+                d="M314.66,256h0L256,197.25,212.6,240.63h0l-5,5L197.33,255.9l-.08.08.08.08L256,314.72l58.7-58.7,0,0-.05,0">
+              </path>
+            </g>
+          </g>
+        </svg></div>
+      <div class="col mt-3 pt-3 ms-5">
+        <p class="fs-3 fw-bold text-white"> BINANCE <br> 4.743,57TRY </p>
+        <div>
+          <p style="color:rgb(14, 167, 14);" class="fw-bold fs-5">%1.12 </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table style="margin-bottom : 200px ; margin-top: 500px; " class="mt-5 container table table-hover  ">
+    <thead style="color:yellow; border-width: 4px ; border-color: rgb(221, 52, 170);" ">
+        <tr>
+          <th class="text-align-center fs-5">COIN</th>
+      <th class="fs-5"> DATE BOUGHT</th>
+      <th class="fs-5"> AMOUNT BOUGHT</th>
+      <th class="fs-5">BOUGHT PRICE</th>
+      <th class="fs-5">BOUGHT SPEND</th>
+      <th class="fs-5">CURRENT PRICE</th>
+      <th class="fs-5">CURRENT VALUE</th>
+      <th class="fs-5">PROFIT₺</th>
+      <th class="fs-5">PROFIT%</th>
+      </tr>
+    </thead>
+    <tbody class="text-white ">
+      <tr>
+        <td>BITCOIN</td>
+        <td>3May2020</td>
+        <td>5.00000000</td>
+        <td>1,000.00TRY</td>
+        <td>5,000.000TRY</td>
+        <td>3,374.42TRY</td>
+        <td>16,872.10TRY</td>
+        <td  style=" background-color:rgb(14, 167, 14)">11,872.10TRY</td>
+        <td  style=" background-color:rgb(14, 167, 14)">237.44%</td>
+      
+       
+      </tr>
+      <tr>
+        <td>ETHEREUM</td>
+        <td>9May2020</td>
+        <td>26.23547427</td>
+        <td>62.00TRY</td>
+        <td>1,639.74TRY</td>
+        <td>192.65TRY</td>
+        <td>5,095.09TRY</td>
+        <td style=" background-color:rgb(14, 167, 14)">3,445.35TRY</td>
+        <td  style=" background-color:rgb(14, 167, 14)">210.73%</td>
+       
+       
+      </tr>
+      <tr>
+        <td>XRP</td>
+        <td>19May2020</td>
+        <td>37.60482759</td>
+        <td>138.08TRY</td>
+        <td>5,212.38TRY</td>
+        <td>236.25TRY</td>
+        <td>8,918.20TRY</td>
+        <td  style=" background-color:rgb(14, 167, 14)">3,705.82TRY</td>
+        <td  style=" background-color:rgb(14, 167, 14)">71.10%</td>
+      
+       
+      </tr>
+     
+       
+      </tr>
+      <tr>
+        <td>TRON</td>
+        <td>11June2020</td>
+        <td>12.58693374</td>
+        <td>31.81TRY</td>
+        <td>404.70TRY</td>
+        <td>34.55TRY</td>
+        <td>440.65TRY</td>
+        <td  style=" background-color:rgb(14, 167, 14)">34.95TRY</td>
+        <td style=" background-color:rgb(14, 167, 14)">8.61%</td>
+        
+       
+      </tr>
+      <tr>
+        <td>EOS</td>
+        <td>19June2020</td>
+        <td>19.45873843</td>
+        <td>35.68TRY</td>
+        <td>689.95TRY</td>
+        <td>37.61TRY</td>
+        <td>727.28TRY</td>
+        <td  style=" background-color:rgb(14, 167, 14)">37.32TRY</td>
+        <td  style=" background-color:rgb(14, 167, 14)">5.41%</td>
+      
+      </tr>
+      <tr >
+        <td>Filecoin</td>
+        <td>21June2020</td>
+        <td>49.04853483</td>
+        <td>40.34TRY</td>
+        <td>1,824.43TRY</td>
+        <td>34.29TRY</td>
+        <td>1,550.81TRY</td>
+        <td  style=" background-color:rgb(196, 53, 53)">-273.62TRY</td>
+        <td  style=" background-color:rgb(196, 53, 53)">-15.00%</td>
+      
+       
+      </tr>
+      
+        <table  style="width: 300px ; margin-bottom: 200px;" class=" text-white container table">
+          <thead style="background-color: orange;">
+            <tr >
+              <th>TOTAL</th>
+              <th>BOUGHT SPEND</th>
+              <th>CURRENT VALUE</th>
+              <th>PROFIT₺</th>
+              <th>PROFIT%</th>
+              
+            </tr>
+          </thead>
+          <tbody style="border:none">
+            <tr >
+              <td></td>
+              <td>14,772.21TRY</td>
+              <td>33,604.13TRY</td>
+              <td style="background-color: rgb(14, 167, 14) ;">18,831.92</td>
+              <td style="background-color: rgb(14, 167, 14) ;">127.48%</td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+     
+    </tbody>
+  </table>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="navbarcolor  vh-100 mt-3 ">
+    <div class="container ">
+      <div class=" row mt-5 pt-5">
+        <div class="col-4">
+          <div class="text-white">
+            <p class="fw-bold fs-1">BEGS</p>
+            <p class="fw-bold fs-4">help@begs.com</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="text-white">
+            <p class="fw-bold fs-3">Corporate</p>
+            <p class="fw-bold fs-5">Corporate</p>
+            <p class="fw-bold fs-5">About Us</p>
+            <p class="fw-bold fs-5">Career Opportunities</p>
+            <p class="fw-bold fs-5">Announcements</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="text-white">
+            <p class="fw-bold fs-3">Services</p>
+            <p class="fw-bold fs-5">Markets</p>
+            <p class="fw-bold fs-5">Affiliate Program</p>
+            <p class="fw-bold fs-5">API</p>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="text-white">
+            <p class="fw-bold fs-3">Help&Support</p>
+            <p class="fw-bold fs-5">Support Center</p>
+            <p class="fw-bold fs-5">Frequently asked Questions</p>
+            <p class="fw-bold fs-5">Fees</p>
+            <p class="fw-bold fs-5">Communication</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>

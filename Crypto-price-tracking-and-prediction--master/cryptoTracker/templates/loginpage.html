@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <title>BEGS</title>
+</head>
+
+<body style="background-color:#d697ce">
+
+  <nav style="height: 100px;" class=" navbar navbar-expand-sm navbarcolor">
+    <div class="container ">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a style="font-size : 70px; " class=" ms-0 ps-0 nav-link active text-white " href="#"><strong>BEGS</strong></a>
+        </li>
+       
+    </div>
+  </nav>
+ 
+{%block content%}
+<section  class=" bg-image"
+style="background-image: url('https://img.currency.com/imgs/articles/1472xx/shutterstock_794562280_1.jpg');">
+ 
+        <div class="container-fluid " style="margin-top:300px; margin-bottom:600px ">
+            <div class="" style="margin-top:200px ">
+                <div class="rounded d-flex justify-content-center">
+                    <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-light">
+                        <div class="text-center">
+                            <h1 class="navbarcolor2 fs-1"><strong>Sign In</strong></h1>
+                        </div>
+                        <form method="POST" class="form-signin" >
+                          {{ form.hidden_tag() }} {#hidden CSRF token field#}
+                            <div class="p-4">
+                                <div class="input-group mb-3">
+                                    <span  style="background-color: rgb(220, 20, 143);" class="input-group-text navbarcolor"><i
+                                            style="background-color: rgb(220, 20, 143);" class="bi bi-person-plus-fill text-white"></i></span>
+                                            {{ form.username.label() }}
+                                            {{ form.username(class="form-control", placeholder="User Name") }}
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span style="background-color: rgb(220, 20, 143)"class="input-group-text navbarcolor"><i
+                                        style="background-color: rgb(220, 20, 143)" class="bi bi-key-fill text-white"></i></span>
+                                        {{ form.password.label() }}
+                                        {{ form.password(class="form-control", placeholder="Password") }}
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Remember Me
+                                    </label>
+                                </div>
+                                  {{ form.submit(style="background-color: rgb(220, 20, 143);" , class="btn text-center text-white mt-2") }}
+                                
+                                <p class="fs-4 text-center mt-5">Don't have an account?
+                                    <span class="navbarcolor2"><a class="navbarcolor2" href="{{ url_for('register_page') }}">Sign Up</a></span>
+                                </p>
+                                <p class="text-center navbarcolor2 fs-4"><a class="navbarcolor2">Forgot your password?</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div></section>
+        {%endblock%}
+        <div class="navbarcolor vh-100 mt-5 pt-3 ">
+            <div class="container ">
+              <div class=" row mt-5 pt-5">
+                <div class="col-4">
+                  <div class="text-white">
+                    <p class="fw-bold fs-1">BEGS</p>
+                    <p class="fw-bold fs-4">help@begs.com</p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="text-white">
+                    <p class="fw-bold fs-3">Corporate</p>
+                    <p class="fw-bold fs-5">Corporate</p>
+                    <p class="fw-bold fs-5">About Us</p>
+                    <p class="fw-bold fs-5">Career Opportunities</p>
+                    <p class="fw-bold fs-5">Announcements</p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="text-white">
+                    <p class="fw-bold fs-3">Services</p>
+                    <p class="fw-bold fs-5">Markets</p>
+                    <p class="fw-bold fs-5">Affiliate Program</p>
+                    <p class="fw-bold fs-5">API</p>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="text-white">
+                    <p class="fw-bold fs-3">Help&Support</p>
+                    <p class="fw-bold fs-5">Support Center</p>
+                    <p class="fw-bold fs-5">Frequently asked Questions</p>
+                    <p class="fw-bold fs-5">Fees</p>
+                    <p class="fw-bold fs-5">Communication</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+</body>
+
+</html>
